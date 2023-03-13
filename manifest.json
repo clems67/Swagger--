@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Swagger++",
+  "version": "1.0",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://localhost:5001/swagger/index.html/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Swagger++",
+    "default_popup": "popup.html"
+  }
+}
