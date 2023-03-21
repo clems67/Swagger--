@@ -19,10 +19,6 @@ setTimeout(() => {
   const nbController = document.getElementsByClassName(
     "opblock-tag no-desc"
   ).length;
-  //-1 because of i18nextLng : i don't know why it swpans in localStorage
-  if (nbController != localStorage.length - 1) {
-    HideEverything();
-  }
   ChangeSpanIfDifferentFromFavorits();
 }, 400);
 
